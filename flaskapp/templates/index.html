@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>airline review</title>
+    <style>
+    .water {
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+	background: linear-gradient(to right, #86fde8, #acb6e5);
+  </style>
+</head>
+<body>
+<center><h1 style = "position:10%; color:blue;">SENTIMENTAL CLASSIFICATION AND OPINION MINING ON AIRLINE REVIEWS<h1></center>
+<br><br>
+ <img class="water" src="E:\MINIPROJECT\FLASKAPP\Templates\Static\gettyimages-862026202-612x612.jpg" alt="" >
+  <p style="font-size: 40px;text-align:center;"><!--margin-top:5%;-->Please Provide Your Valuable Feedback</p><br>
+		<form action = "/login" method = "POST">
+		<center>
+			<textarea name="review" rows="5" cols="100" placeholder="Enter your text here!" style = "background-color:white;opacity:0.85;"></textarea>
+		<br><br>
+		<input type="submit" style="font-size: 20px;">
+		</center>
+  </form>
+<center><b style="font-size:2px;">{{label}}</b></center>
+<center><p>
+	{% if label == "Positive Tweet" %}
+	<p style ="color:green;font-size:50px;">Positive Tweet</p>
+		
+    {% else %}
+    {% if label == "Negative Tweet" %}
+    <p style = "color:red;font-size:50px;">Negative Tweet</p>
+        
+    {% else %}
+    {% if label == "Neutral Tweet" %}
+	<p style = "color:black;font-size:50px;">Neutral Tweet</p>
+	{% endif %}
+    {% endif %}
+    {% endif %}
+</p></center>
+</body>
+</html>
+<!--linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),-->
